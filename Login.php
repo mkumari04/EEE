@@ -1,9 +1,10 @@
-<?php
+<?php  
 include "connection.php";
 
 session_start();
 
-if(isset($_POST["userLogin"])){
+if(isset($_POST["userLogin"]))
+	{
 	$email = mysqli_real_escape_string($con,$_POST["userEmail"]);
 	$password = md5($_POST["userPassword"]);
 	$sql = "SELECT * FROM customers WHERE email = '$email' AND password = '$password'";
@@ -16,6 +17,6 @@ if(isset($_POST["userLogin"])){
 			echo "truefsvkjbskvvsbd";
 		}
 
-}
+	}
 
 ?>
